@@ -1,0 +1,106 @@
+/* General Reset */
+body, h1, h2, h3, p, ul, li, a {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    color: #333;
+    background-color: #f9f9f9;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Color scheme */
+  :root {
+    --gold: #C3A712;
+    --grey: #555555;
+  }
+  
+  /* Header */
+  .header {
+    text-align: center;
+    padding: 2rem;
+    background-color: var(--grey);
+    color: white;
+  }
+  
+  .logo {
+    display: inline-block;
+    margin-bottom: 1rem;
+  }
+  
+  .logo-icon {
+    display: inline-flex;
+    font-size: 2rem;
+    font-weight: bold;
+    align-items: center;
+  }
+  
+  .logo-icon .gold {
+    color: var(--gold);
+  }
+  
+  .logo-icon .grey {
+    color: white;
+  }
+  
+  .company-name {
+    font-size: 2.5rem;
+    margin: 0.5rem 0;
+  }
+  
+  .tagline {
+    font-size: 1.2rem;
+    font-style: italic;
+    color: var(--gold);
+  }
+  
+  /* Main content */
+  .about-content {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 1rem;
+    background: white;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .about-content h2, .about-content h3 {
+    color: var(--grey);
+    margin-bottom: 1rem;
+  }
+  
+  .about-content p, .about-content ul {
+    margin-bottom: 1.5rem;
+  }
+  
+  .contact-info ul {
+    list-style: none;
+  }
+  
+  .contact-info ul li {
+    margin-bottom: 0.5rem;
+  }
+  
+  .contact-info a {
+    color: var(--gold);
+    text-decoration: none;
+  }
+  
+  .contact-info a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Footer */
+  .footer {
+    text-align: center;
+    padding: 1rem;
+    background: var(--grey);
+    color: white;
+    margin-top: 2rem;
+  }
+  
