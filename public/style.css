@@ -104,3 +104,27 @@ body, h1, h2, h3, p, ul, li, a {
     margin-top: 2rem;
   }
   
+  /*Carousel*/
+  .service-carousel {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.service-card {
+  background-color: #f5f5f5;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s ease-in-out;
+}
+
+.service-card:hover {
+  transform: scale(1.05);
+}
+
+.slick-prev, .slick-next {
+  background-color: #000;
+  border-radius: 50%;
+}
+

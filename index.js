@@ -11,16 +11,24 @@ app.use(express.static("public"));
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const indexPath = join(__dirname, "index.ejs");
 const aboutPath = join(__dirname, "views/about.ejs");
+const servicesPath = join(__dirname, "views/services.ejs");
+// Sample data for services (you can retrieve this from a database)
+const services = [
+  { name: "Commercial Law", description: "Comprehensive support for business litigation, corporate governance, and legal compliance." },
+  { name: "Family Law", description: "Handling divorce, custody, and estate matters with professional legal expertise." },
+  { name: "Property Law", description: "Ensuring smooth property transactions, including conveyancing services." },
+  { name: "Business Restructuring & Insolvency", description: "Strategic advice for companies facing financial difficulties or restructuring needs." }
+];
 
 
 // Render index page
 app.get("/", (req, res) => {
-  res.render(indexPath);
+  res.render(servicesPath, { services: services });
 });
 
 // Render about page
-app.get("/about", (req, res) => {
-  res.render(aboutPath);
+app.get("/contact_us", (req, res) => {
+  res.render(indexPath);
 });
 
 // Function to generate random ID
