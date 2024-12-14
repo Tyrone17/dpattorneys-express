@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diane Peters - Service Request Form</title>
+    <link rel="stylesheet" href="/style.css" />
+    <link rel="stylesheet" href="/form.css" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+</head>
+<body>
+     <header class="header">
+   <div class="logo">
+      <!-- Logo integration: D and P -->
+      <div class="logo-icon">
+        <span class="gold">D</span>
+        <span class="grey">P</span>
+      </div>
+      <p class="tagline" >Diane Peters Attorneys</p>
+    </div>
+  </header>
+    <h1 class="title">Service Request Form</h1>
+    <section class="home-container">
+    <form class="form-container" action="/form-submitted" method="POST">
+        <!-- Reason Field -->
+        <label class="form-text" for="reason">Reason for Request:</label>
+        <input type="text" id="reason" name="reason" value="<%= reason %>" readonly>
+        <br><br>
+        <!-- Additional Form Fields -->
+        <label class="form-text" for="name">Your Name:</label>
+        <input type="text" id="name" name="name" required>
+        <br><br>
+        <label class="form-text" for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+        <br><br>
+        <label class="form-text" for="whatsapp">WhatsApp:</label>
+        <input type="number" id="whatsapp" name="whatsapp" required>
+        <br><br>
+        <label class="form-text" for="request">Your message:</label>
+        <input type="text" id="request" name="request" required>
+        <br><br>
+        <button type="submit">Submit</button>
+    </form>
+    </section>
+    <footer class="footer">
+    <p>&copy; 2024 Diane Peters Attorneys | All Rights Reserved.</p>
+    <p><a href="">terms of service</a> | <a href="">privacy policy</a></p>
+         <h5>Developed & hosted by &copy:<a class="" href="www.techservit.co.za">techservit.co.za</a></h5>
+  </footer>
+</body>
+</html>
+

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us - Diane Peters Attorneys</title>
+  <link rel="stylesheet" href="/style.css" />
+  <link rel="stylesheet" href="/carousel.css" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+</head>
+<body>
+    <header class="header">
+   <div class="logo">
+      <!-- Logo integration: D and P -->
+      <div class="logo-icon">
+        <span class="gold">D</span>
+        <span class="grey">P</span>
+      </div>
+      <p class="tagline" >Diane Peters Attorneys</p>
+    </div>
+  </header>
+  <main class="about-content">
+   <section class="about-content">
+      <h2>About Us</h2>
+        <p>
+        At Diane Peters Attorneys, we pride ourselves on providing professional legal services tailored to our clients' needs. Based in Soweto, we are committed to delivering solutions with integrity and dedication.
+        </p>
+    <div class="carousel-container">
+      <div class="carousel-track">
+        <div class="carousel-card">
+          <h3>Commercial Law</h3>
+            <p>Comprehensive support for business litigation, corporate governance, and legal compliance.</p>
+        </div>
+        <div class="carousel-card">
+          <h3>Family Law</h3>
+            <p>Handling divorce, custody, and estate matters with professional legal expertise.</p>
+        </div>
+        <div class="carousel-card">
+          <h3>Property Law</h3>
+            <p>Ensuring smooth property transactions, including conveyancing services.</p>
+        </div>
+        <div class="carousel-card">
+          <h3>Business Restructuring & Insolvency</h3>
+            <p>Strategic advice for companies facing financial difficulties or restructuring needs.</p>
+        </div>
+      </div>
+    </div>
+    </section>
+  </main>
+  <section class="about-content">
+        <p>Whatever your legal needs, we are here for you -<em class="tagline"> the People</em>. Contact us <a href="/contact_us">now</a></p>
+  </section>
+  <footer class="footer">
+    <p>&copy; 2024 Diane Peters Attorneys | All Rights Reserved.</p>
+    <p><a href="">terms of service</a> | <a href="">privacy policy</a></p>
+         <h5>Developed & hosted by &copy:<a class="" href="www.techservit.co.za">techservit.co.za</a></h5>
+  </footer>
+  <script>
+  document.addEventListener("DOMContentLoaded", function() {
+    const track = document.querySelector(".carousel-track");
+    const cards = document.querySelectorAll(".carousel-card");
+    const totalCards = cards.length;
+    let currentIndex = 0;
+
+    // Function to move the carousel
+    function moveCarousel() {
+      currentIndex = (currentIndex + 1) % totalCards; // Cycle through cards
+      track.style.transform = `translateX(-${currentIndex * 100}%)`;
+    }
+
+    // Set a timer for auto-scrolling
+    setInterval(moveCarousel, 4750); // 3 seconds
+  });
+</script>
+</body>
+</html>

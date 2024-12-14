@@ -1,0 +1,40 @@
+{
+    "about": {
+        "company_name": "Diane Peters Attorneys Inc.",
+        "established": "",
+        "business_structure": "incorporated personal liability company",
+        "industry": "law",
+        "services": [
+            "Commercial Law",
+            "Family Law",
+            "Property Law",
+            "Business Restructuring & Insolvency",
+            "Arbitration"
+        ],
+        "descriptions": [
+            "business litigation, corporate governance, and legal compliance",
+            "divorce, custody, and estate matters",
+            "property sale or acquisition, conveyancing",
+            "advisory",
+            "arbitration services"
+        ],
+        "mission": "",
+        "vision": "",
+        "values": [
+            " ",
+            " ",
+            " ",
+            " ",
+            " "
+        ],
+        "links": [
+            "/form?reason=commercial-law",
+            "/form?reason=family-law",
+            "/form?reason=property-law",
+            "/form?reason=business-restructuring",
+            "/form?reason=arbitration"
+        ]
+    }
+}
+
+
