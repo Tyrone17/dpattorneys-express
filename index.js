@@ -1,17 +1,46 @@
 import express from "express";
 import { dirname, join } from "path";
 import { fileURLToPath } from "url";
+<<<<<<< HEAD
+=======
+import helmet from "helmet";
+>>>>>>> 2f03a04 (V.1.0.2)
 const app = express();
 const PORT = 3333 || 300000;
 
 // Configure Express middleware
 app.use(express.static("public"));
+<<<<<<< HEAD
+=======
+app.use(
+    helmet({
+        contentSecurityPolicy: {
+            useDefaults: true,
+            directives: {
+                defaultSrc: ["'self'"],
+                imgSrc: ["'self'", "data:"],
+                scriptSrc: ["'self'"],
+                styleSrc: ["'self'", "'unsafe-inline'"],
+            },
+        },
+    })
+);
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+>>>>>>> 2f03a04 (V.1.0.2)
 
 // Define paths to view files
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const indexPath = join(__dirname, "index.ejs");
+<<<<<<< HEAD
 const aboutPath = join(__dirname, "views/about.ejs");
 const servicesPath = join(__dirname, "views/services.ejs");
+=======
+const servicesPath = join(__dirname, "views/services.ejs");
+const termsPage = join(__dirname, "views/terms.ejs");
+const privacyPage = join(__dirname, "views/privacy.ejs");
+const form = join(__dirname, "views/form.ejs");
+>>>>>>> 2f03a04 (V.1.0.2)
 // Sample data for services (you can retrieve this from a database)
 const services = [
   { name: "Commercial Law", description: "Comprehensive support for business litigation, corporate governance, and legal compliance." },
@@ -26,9 +55,50 @@ app.get("/", (req, res) => {
   res.render(servicesPath, { services: services });
 });
 
+<<<<<<< HEAD
 // Render about page
 app.get("/contact_us", (req, res) => {
   res.render(indexPath);
+=======
+// Render contact page
+app.get("/contact_us", (req, res) => {
+  res.render(indexPath,  { services: services });
+});
+
+// Render terms page
+app.get("/terms", (req, res) => {
+  res.render(termsPage);
+});
+
+// Render privacy page
+app.get("/privacy", (req, res) => {
+  res.render(privacyPage);
+});
+
+// TODO: techservit_about.json in public folder not loading 
+//  Done: explicitly set the Content-Type header
+app.get('/data.json', (req, res) => {
+  res.setHeader('Content-Type', 'application/json');
+  res.sendFile(__dirname + '/pubic/data.json');
+});
+
+// Route for the form
+app.get('/form', (req, res) => {
+    const reason = req.query.reason || ""; // Get the reason from the query string
+    res.render(form, { reason });       // Pass the reason to the EJS template
+});
+
+// Handle form submission
+app.post('/form-submitted', (req, res) => {
+    console.log(req.body);
+    const { name, email, request,whatsapp } = req.body;
+    const { reason } = req.body; // Destructure 'reason' from req.body
+    // Process the form data (e.g., save to a database or send an email)
+    //console.log(`Reason: ${reason}, Name: ${name}, Email: ${email}`);
+
+    // Respond to the user
+    res.send(`Form submitted successfully!<br>Reason: ${reason}<br>Name: ${name}<br>Email: ${email}`);
+>>>>>>> 2f03a04 (V.1.0.2)
 });
 
 // Function to generate random ID

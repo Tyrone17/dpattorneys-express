@@ -3,6 +3,10 @@ body, h1, h2, h3, p, ul, li, a {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+<<<<<<< HEAD
+=======
+    list-style: none; /* Removes bullets */
+>>>>>>> 2f03a04 (V.1.0.2)
   }
   
   body {
@@ -31,11 +35,19 @@ body, h1, h2, h3, p, ul, li, a {
   .logo {
     display: inline-block;
     margin-bottom: 1rem;
+<<<<<<< HEAD
+=======
+    width:100%;
+>>>>>>> 2f03a04 (V.1.0.2)
   }
   
   .logo-icon {
     display: inline-flex;
+<<<<<<< HEAD
     font-size: 2rem;
+=======
+    font-size: 1rem;
+>>>>>>> 2f03a04 (V.1.0.2)
     font-weight: bold;
     align-items: center;
   }
@@ -54,10 +66,25 @@ body, h1, h2, h3, p, ul, li, a {
   }
   
   .tagline {
+<<<<<<< HEAD
     font-size: 1.2rem;
     font-style: italic;
     color: var(--gold);
   }
+=======
+    font-size: 1.7rem;
+    font-style: italic;
+    color: var(--gold);
+    font-family: 'Arsenal';
+  }
+   
+   @font-face {
+    font-family: 'Arsenal';
+    font-weight: normal;
+    font-display: swap;
+    src: url('public/Arsenal-Regular.woff2') format('woff2');
+}
+>>>>>>> 2f03a04 (V.1.0.2)
   
   /* Main content */
   .about-content {
@@ -128,3 +155,84 @@ body, h1, h2, h3, p, ul, li, a {
   border-radius: 50%;
 }
 
+<<<<<<< HEAD
+=======
+/* Styles for Index What We Do section */
+.index-li {
+  margin: 15px 0;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #fff;
+  color: black;
+  font-weight: 600;
+}
+
+.index-p {
+  margin: 5px 0 0;
+  color: #1876be;
+  font-weight: 500;
+}
+
+.contact-info a:hover {
+  text-decoration: underline;
+}
+
+/* X.com feed styles */
+.x-feed {
+  margin: 2rem auto;
+  max-width: 600px;
+  text-align: center;
+}
+
+.x-feed h2 {
+  color: var(--grey);
+  margin-bottom: 1rem;
+  font-size: 1.8rem;
+}
+
+.twitter-timeline {
+  border: 1px solid var(--gold);
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.tweet-list {
+  list-style: none;
+  padding: 0;
+}
+
+.tweet {
+  margin-bottom: 1.5rem;
+  padding: 1rem;
+  background: #f9f9f9;
+  border-left: 4px solid var(--gold);
+  border-radius: 5px;
+}
+
+.tweet small {
+  display: block;
+  margin-top: 0.5rem;
+  color: #666;
+}
+
+/* Styles for Feed */
+.feed-li {
+  margin: 15px 0;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #fff;
+}
+
+.feed-h3 {
+  margin: 0;
+  color: #0077cc;
+}
+
+.feed-p {
+  margin: 5px 0 0;
+  color: #555;
+}
+
+>>>>>>> 2f03a04 (V.1.0.2)
