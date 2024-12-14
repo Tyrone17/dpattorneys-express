@@ -3,10 +3,7 @@ body, h1, h2, h3, p, ul, li, a {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-<<<<<<< HEAD
-=======
     list-style: none; /* Removes bullets */
->>>>>>> 2f03a04 (V.1.0.2)
   }
   
   body {
@@ -35,19 +32,12 @@ body, h1, h2, h3, p, ul, li, a {
   .logo {
     display: inline-block;
     margin-bottom: 1rem;
-<<<<<<< HEAD
-=======
     width:100%;
->>>>>>> 2f03a04 (V.1.0.2)
   }
   
   .logo-icon {
     display: inline-flex;
-<<<<<<< HEAD
-    font-size: 2rem;
-=======
     font-size: 1rem;
->>>>>>> 2f03a04 (V.1.0.2)
     font-weight: bold;
     align-items: center;
   }
@@ -66,12 +56,6 @@ body, h1, h2, h3, p, ul, li, a {
   }
   
   .tagline {
-<<<<<<< HEAD
-    font-size: 1.2rem;
-    font-style: italic;
-    color: var(--gold);
-  }
-=======
     font-size: 1.7rem;
     font-style: italic;
     color: var(--gold);
@@ -84,7 +68,6 @@ body, h1, h2, h3, p, ul, li, a {
     font-display: swap;
     src: url('public/Arsenal-Regular.woff2') format('woff2');
 }
->>>>>>> 2f03a04 (V.1.0.2)
   
   /* Main content */
   .about-content {
@@ -155,8 +138,6 @@ body, h1, h2, h3, p, ul, li, a {
   border-radius: 50%;
 }
 
-<<<<<<< HEAD
-=======
 /* Styles for Index What We Do section */
 .index-li {
   margin: 15px 0;
@@ -235,4 +216,3 @@ body, h1, h2, h3, p, ul, li, a {
   color: #555;
 }
 
->>>>>>> 2f03a04 (V.1.0.2)
