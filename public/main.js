@@ -14,6 +14,17 @@ document.addEventListener("DOMContentLoaded", function() {
     setInterval(moveCarousel, 4750); // 3 seconds
   });
 
+  function openInNewWindow() {
+    if (!url) {
+        console.error("No URL provided!");
+        return;
+    }
+
+    // Open the URL in a new window
+    window.open("www.techservit.co.za", '_blank', 'noopener,noreferrer');
+}
+
+
 function shit() {
     // Create an AJAX object to load the about.json and display the contents
     const xhttp = new XMLHttpRequest();
