@@ -23,12 +23,14 @@ app.use(
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
+
 // Define paths to view files
 const __dirname = dirname(fileURLToPath(import.meta.url));
 //const indexPath = join(__dirname, "index.ejs");
 const indexPath = join(__dirname, "views/services.ejs");
 const termsPage = join(__dirname, "views/terms.ejs");
 const privacyPage = join(__dirname, "views/privacy.ejs");
+const about = join(__dirname, "views/about.ejs");
 const form = join(__dirname, "views/form.ejs");
 // Sample data for services (you can retrieve this from a database)
 const services = [
@@ -37,7 +39,10 @@ const services = [
   { name: "Property Law", description: "Ensuring smooth property transactions, including conveyancing services." },
   { name: "Business Restructuring & Insolvency", description: "Strategic advice for companies facing financial difficulties or restructuring needs." }
 ];
-
+app.get('/public/main.js', (req, res) => {
+  res.setHeader('Content-Type', 'application/javascript');
+  res.sendFile(__dirname + '/public/main.js');
+});
 
 // Render index page
 app.get("/", (req, res) => {
@@ -46,18 +51,45 @@ app.get("/", (req, res) => {
 
 // Render contact page
 app.get("/contact_us", (req, res) => {
-  res.render(indexPath,  { services: services });
+  res.render(about,  { services: services });
+});
+
+// Service policies and terms
+app.get('/privacy_tos.json', (req, res) => {
+  res.setHeader('Content-Type', 'application/json');
+  res.sendFile(__dirname + '/privacy_tos.json');
+});
+
+// Render policies page
+app.get('/privacy', async (req, res) => {
+  try {
+    const response = await fetch('http://127.0.0.1:3333/privacy_tos.json');
+    const policies = await response.json();
+    
+    res.render(privacyPage, {
+      privacyPolicy: policies.privacyPolicy,
+    });
+  } catch (err) {
+    console.error('Error fetching policies JSON:', err);
+    res.status(500).send('Server Error');
+  }
 });
 
 // Render terms page
-app.get("/terms", (req, res) => {
-  res.render(termsPage);
+app.get('/terms', async (req, res) => {
+  try {
+    const response = await fetch('http://127.0.0.1:3333/privacy_tos.json');
+    const policies = await response.json(); 
+    
+    res.render(termsPage, {
+      termsOfUse: policies.termsOfUse
+    });
+  } catch (err) {
+    console.error('Error fetching policies JSON:', err);
+    res.status(500).send('Server Error');
+  }
 });
 
-// Render privacy page
-app.get("/privacy", (req, res) => {
-  res.render(privacyPage);
-});
 
 // TODO: techservit_about.json in public folder not loading 
 //  Done: explicitly set the Content-Type header

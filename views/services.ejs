@@ -58,22 +58,8 @@
     <p><a href="">terms of service</a> | <a href="">privacy policy</a></p>
          <h5>Developed & hosted by &copy:<a class="" href="www.techservit.co.za">techservit.co.za</a></h5>
   </footer>
-  <script>
-  document.addEventListener("DOMContentLoaded", function() {
-    const track = document.querySelector(".carousel-track");
-    const cards = document.querySelectorAll(".carousel-card");
-    const totalCards = cards.length;
-    let currentIndex = 0;
-
-    // Function to move the carousel
-    function moveCarousel() {
-      currentIndex = (currentIndex + 1) % totalCards; // Cycle through cards
-      track.style.transform = `translateX(-${currentIndex * 100}%)`;
-    }
-
-    // Set a timer for auto-scrolling
-    setInterval(moveCarousel, 4750); // 3 seconds
-  });
-</script>
+  <script src="/main.js" type="text/javascript">
+       
+  </script>
 </body>
 </html>

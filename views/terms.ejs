@@ -5,13 +5,22 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>techservit -<%= termsOfUse.title%></title>
+    <title>Diane Peters Attorneys -<%= termsOfUse.title%></title>
     <link rel="stylesheet" href="/style.css" />
     
 </head>
 
 <body class="body-container">
-    <%- include('../public/partials/header.ejs') %>
+    <header class="header">
+        <div class="logo">
+           <!-- Logo integration: D and P -->
+           <div class="logo-icon">
+                <span class="gold">D</span>
+                <span class="grey">P</span>
+           </div>
+           <p class="tagline" >Diane Peters Attorneys</p>
+         </div>
+    </header>
     <div class="form-container">
         <h1><%= termsOfUse.title %></h1>
         <h4>Version: <%= termsOfUse.version%></h4>
@@ -71,6 +80,10 @@
             <p><%= termsOfUse.contactInformation %></p>
         </section>
     </div>
-    <%- include('../public/partials/footer.ejs') %>
+    <footer class="footer">
+        <p>&copy; 2024 Diane Peters Attorneys | All Rights Reserved.</p>
+        <p><a href="">terms of service</a> | <a href="">privacy policy</a></p>
+        <h5>Developed & hosted by &copy:<a class="" href="www.techservit.co.za">techservit.co.za</a></h5>
+    </footer>
 </body>
 </html>

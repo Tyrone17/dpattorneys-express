@@ -1,3 +1,19 @@
+document.addEventListener("DOMContentLoaded", function() {
+    const track = document.querySelector(".carousel-track");
+    const cards = document.querySelectorAll(".carousel-card");
+    const totalCards = cards.length;
+    let currentIndex = 0;
+
+    // Function to move the carousel
+    function moveCarousel() {
+      currentIndex = (currentIndex + 1) % totalCards; // Cycle through cards
+      track.style.transform = `translateX(-${currentIndex * 100}%)`;
+    }
+
+    // Set a timer for auto-scrolling
+    setInterval(moveCarousel, 4750); // 3 seconds
+  });
+
 function shit() {
     // Create an AJAX object to load the about.json and display the contents
     const xhttp = new XMLHttpRequest();
