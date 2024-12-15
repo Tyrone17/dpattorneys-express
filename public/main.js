@@ -14,15 +14,18 @@ document.addEventListener("DOMContentLoaded", function() {
     setInterval(moveCarousel, 4750); // 3 seconds
   });
 
-  function openInNewWindow() {
+  document.getElementById('openButton').addEventListener('click', function () {
+    openInNewWindow('https://www.techservit.co.za');
+});
+
+function openInNewWindow(url) {
     if (!url) {
         console.error("No URL provided!");
         return;
     }
-
-    // Open the URL in a new window
-    window.open("www.techservit.co.za", '_blank', 'noopener,noreferrer');
+    window.open(url, '_blank', '');
 }
+
 
 
 function shit() {
