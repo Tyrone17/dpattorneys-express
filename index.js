@@ -1,25 +1,25 @@
 import express from "express";
 import { dirname, join } from "path";
 import { fileURLToPath } from "url";
-import helmet from "helmet";
+// import helmet from "helmet";
 const app = express();
 const PORT = 3333 || 300000;
 
 // Configure Express middleware
 app.use(express.static("public"));
-app.use(
-    helmet({
-        contentSecurityPolicy: {
-            useDefaults: true,
-            directives: {
-                defaultSrc: ["'self'"],
-                imgSrc: ["'self'", "data:"],
-                scriptSrc: ["'self'"],
-                styleSrc: ["'self'", "'unsafe-inline'"],
-            },
-        },
-    })
-);
+// app.use(
+//     helmet({
+//         contentSecurityPolicy: {
+//             useDefaults: true,
+//             directives: {
+//                 defaultSrc: ["'self'"],
+//                 imgSrc: ["'self'", "data:"],
+//                 scriptSrc: ["'self'"],
+//                 styleSrc: ["'self'", "'unsafe-inline'"],
+//             },
+//         },
+//     })
+// );
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
