@@ -16,10 +16,13 @@
   "author": "techservit.co.za",
   "license": "ISC",
   "description": "",
+  "engines": {
+    "node": ">=16"
+  },
   "dependencies": {
     "ejs": "^3.1.10",
     "express": "^4.21.1",
-    "helmet": "^8.0.0",
+    "helmet": "^4.6.0",
     "path": "^0.12.7",
     "url": "^0.11.4"
   }

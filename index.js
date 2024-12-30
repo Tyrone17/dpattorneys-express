@@ -1,25 +1,15 @@
+if (!Object.hasOwn) {
+  Object.hasOwn = (obj, prop) => Object.prototype.hasOwnProperty.call(obj, prop);
+}
+
 import express from "express";
 import { dirname, join } from "path";
 import { fileURLToPath } from "url";
-// import helmet from "helmet";
 const app = express();
-const PORT = 3333 || 300000;
+const PORT = 3000 || 300000;
 
 // Configure Express middleware
 app.use(express.static("public"));
-// app.use(
-//     helmet({
-//         contentSecurityPolicy: {
-//             useDefaults: true,
-//             directives: {
-//                 defaultSrc: ["'self'"],
-//                 imgSrc: ["'self'", "data:"],
-//                 scriptSrc: ["'self'"],
-//                 styleSrc: ["'self'", "'unsafe-inline'"],
-//             },
-//         },
-//     })
-// );
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
@@ -44,13 +34,18 @@ app.get('/public/main.js', (req, res) => {
   res.sendFile(__dirname + '/public/main.js');
 });
 
+app.get('/public/main.js', (req, res) => {
+  res.setHeader('Content-Type', 'application/json');
+  res.sendFile(__dirname + '/public/privacy_tos.json');
+});
+
 // Render index page
 app.get("/", (req, res) => {
   res.render(indexPath, { services: services });
 });
 
 // Render contact page
-app.get("/contact_us", (req, res) => {
+app.get("/contact_us", (req, res) => {0
   res.render(about,  { services: services });
 });
 
@@ -63,7 +58,7 @@ app.get('/privacy_tos.json', (req, res) => {
 // Render policies page
 app.get('/privacy', async (req, res) => {
   try {
-    const response = await fetch('http://127.0.0.1:3333/privacy_tos.json');
+    const response = await fetch('http://localhost:3000/privacy_tos.json');
     const policies = await response.json();
     
     res.render(privacyPage, {
@@ -78,7 +73,7 @@ app.get('/privacy', async (req, res) => {
 // Render terms page
 app.get('/terms', async (req, res) => {
   try {
-    const response = await fetch('http://127.0.0.1:3333/privacy_tos.json');
+    const response = await fetch('http://localhost:3000/privacy_tos.json');
     const policies = await response.json(); 
     
     res.render(termsPage, {

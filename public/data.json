@@ -5,17 +5,15 @@
         "business_structure": "incorporated personal liability company",
         "industry": "law",
         "services": [
-            "Commercial Law",
             "Family Law",
             "Property Law",
             "Business Restructuring & Insolvency",
             "Arbitration"
         ],
         "descriptions": [
-            "business litigation, corporate governance, and legal compliance",
-            "divorce, custody, and estate matters",
-            "property sale or acquisition, conveyancing",
-            "advisory",
+            "divorce, custody and maintenance, estate and trust matters",
+            "property sale or purchase",
+            "advisory, debt collection",
             "arbitration services"
         ],
         "mission": "",
@@ -28,7 +26,6 @@
             " "
         ],
         "links": [
-            "/form?reason=commercial-law",
             "/form?reason=family-law",
             "/form?reason=property-law",
             "/form?reason=business-restructuring",
