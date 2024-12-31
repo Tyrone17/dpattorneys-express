@@ -3,7 +3,7 @@ if (!Object.hasOwn) {
 }
 
 import express from "express";
-import { dirname, join } from "path";
+import { dirname, join, path } from "path";
 import { fileURLToPath } from "url";
 const app = express();
 const PORT = 3000 || 300000;
@@ -11,11 +11,12 @@ const PORT = 3000 || 300000;
 // Configure Express middleware
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+const __dirname = dirname(fileURLToPath(import.meta.url));
 // Set the directory for serving static files app.use(express.static(path.join(__dirname, 'public'
-app.use(express.static(path.join(__dirname, 'public')))
+app.use(express.static(join(__dirname, 'public')))
 
 // Define paths to view files
-const __dirname = dirname(fileURLToPath(import.meta.url));
+
 //const indexPath = join(__dirname, "index.ejs");
 const indexPath = join(__dirname, "views/services.ejs");
 const termsPage = join(__dirname, "views/terms.ejs");
