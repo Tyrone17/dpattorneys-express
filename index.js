@@ -22,6 +22,7 @@ const termsPage = join(__dirname, "views/terms.ejs");
 const privacyPage = join(__dirname, "views/privacy.ejs");
 const about = join(__dirname, "views/about.ejs");
 const form = join(__dirname, "views/form.ejs");
+const profile = join(__dirname, "views/profile.ejs");
 // Sample data for services (you can retrieve this from a database)
 const services = [
   { name: "Commercial Law", description: "Comprehensive support for business litigation, corporate governance, and legal compliance." },
@@ -47,6 +48,11 @@ app.get("/", (req, res) => {
 // Render contact page
 app.get("/contact_us", (req, res) => {0
   res.render(about,  { services: services });
+});
+
+// Render profile page
+app.get("/profile", (req, res) => {
+  res.render(profile, { services: services });
 });
 
 // Service policies and terms
