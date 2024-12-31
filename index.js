@@ -3,7 +3,7 @@ if (!Object.hasOwn) {
 }
 
 import express from "express";
-import { dirname, join, path } from "path";
+import { dirname, join, } from "path";
 import { fileURLToPath } from "url";
 const app = express();
 const PORT = 3000 || 300000;
