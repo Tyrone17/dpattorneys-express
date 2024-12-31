@@ -5,16 +5,23 @@
         "business_structure": "incorporated personal liability company",
         "industry": "law",
         "services": [
+            "Criminal Law",
             "Family Law",
+            "Sport & Entertaiment Law",
             "Property Law",
-            "Business Restructuring & Insolvency",
-            "Arbitration"
+            "Debt Reviews",
+            "Road Accident Fund matters",
+            "Dceased Estates",
+            "Collections"
         ],
         "descriptions": [
-            "divorce, custody and maintenance, estate and trust matters",
-            "property sale or purchase",
-            "advisory, debt collection",
-            "arbitration services"
+            "involves prosecuting individuals or organizations accused of crimes. It covers various offenses, including theft, assault, fraud, and murder",
+            "includes marriage, divorce, child custody, adoption, and domestic violence",
+            "this covers contracts, intellectual property rights, endorsements, and disputes between parties such as athletes, artists, agents, and organizations",
+            "involves restructuring debts and negotiating with creditors to make repayment more manageable, providing protection from legal action by creditors",
+            "involves securing compensation for medical expenses, loss of income, and pain and suffering caused by the accident",
+            "includes executing wills, distributing assets to beneficiaries, and ensuring all debts and taxes are paid",
+            "includes legal processes to enforce debt recovery, negotiate settlements, and handle disputes related to unpaid debts"
         ],
         "mission": "",
         "vision": "",
