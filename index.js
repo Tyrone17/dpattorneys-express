@@ -9,10 +9,10 @@ const app = express();
 const PORT = 3000 || 300000;
 
 // Configure Express middleware
-app.use(express.static("public"));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-
+// Set the directory for serving static files app.use(express.static(path.join(__dirname, 'public'
+app.use(express.static(path.join(__dirname, 'public')))
 
 // Define paths to view files
 const __dirname = dirname(fileURLToPath(import.meta.url));
@@ -30,6 +30,7 @@ const services = [
   { name: "Property Law", description: "Ensuring smooth property transactions, including conveyancing services." },
   { name: "Business Restructuring & Insolvency", description: "Strategic advice for companies facing financial difficulties or restructuring needs." }
 ];
+
 app.get('/public/main.js', (req, res) => {
   res.setHeader('Content-Type', 'application/javascript');
   res.sendFile(__dirname + '/public/main.js');
