@@ -40,6 +40,11 @@ app.get('/public/main.js', (req, res) => {
   res.sendFile(__dirname + '/public/privacy_tos.json');
 });
 
+app.get('/public/IMG.jpg', (req, res) => {
+  res.setHeader('Content-Type', 'image/jpg');
+  res.sendFile(__dirname + '/public/IMG.jpg');
+});
+
 // Render index page
 app.get("/", (req, res) => {
   res.render(indexPath, { services: services });
